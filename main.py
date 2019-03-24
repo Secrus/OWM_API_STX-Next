@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 
 import requests
-import json
 import sys
 import config_parser as cp
 
@@ -38,6 +37,7 @@ def parse_data(data):
 
 
 def main():
+    city = parse_city() if len(sys.argv) > 1 else print("No city input")
     data = request_city_info(parse_city())
     if validate_api_response(data):
         temp = parse_data(data.json())

@@ -1,4 +1,2 @@
-{
-  "API_KEY": "729dbab702cdab927012e098fc175809",
-  "API_address": "http://api.openweathermap.org/data/2.5/weather"
-}
+{  "API_KEY": "729dbab702cdab927012e098fc175809",
+  "API_address": "http://api.openweathermap.org/data/2.5/weather"}
