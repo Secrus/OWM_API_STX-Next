@@ -3,9 +3,6 @@
 
 import requests
 import sys
-import config_parser as cp
-
-configs = cp.ConfigParser()
 
 
 def parse_city():
@@ -14,13 +11,12 @@ def parse_city():
 
 
 def request_city_info(city):
-    api_address = configs.get_api_address()
     request_params = {
         "q": city,
-        "APPID": configs.get_api_key(),
+        "APPID": "729dbab702cdab927012e098fc175809",
         "units": "metric",
     }
-    api_response = requests.get(api_address, params=request_params)
+    api_response = requests.get("http://api.openweathermap.org/data/2.5/weather", params=request_params)
     return api_response
 
 
